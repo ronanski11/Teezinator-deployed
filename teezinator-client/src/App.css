@@ -1,0 +1,315 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Dark Mode Colors */
+:root {
+  --background-color: #000000;
+  --text-color: #E0E0E0;
+  --navbar-background-color: #333333;
+  --logo-filter: invert(100%);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  /* This will hide the scrollbar in WebKit browsers */
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #121212 inset !important;
+  -webkit-text-fill-color: white !important;
+  caret-color: white !important;
+}
+
+.stats-column-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.lifetime-stats-container {
+  margin: 1rem;
+  width: 100%;
+}
+
+.stats-bar-animation {
+  transition: width 2s ease-out;
+}
+
+.stats-bar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.navbar {
+  background-color: var(--navbar-background-color);
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+}
+
+/* Content Styles */
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  position: fixed;
+  bottom: 0;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  margin-bottom: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+  box-shadow: 0 0 7px 9px #121212,
+    0 0 15px 10px transparent;
+}
+
+.footer-copyright {
+  color: grey
+}
+
+.react-datepicker__input-container {
+  display: none !important;
+}
+
+.navbar-option {
+  margin: 1rem 5rem;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: rgba(128, 128, 128, 0.518);
+}
+
+.navbar-option-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.logo-title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar-title {
+  font-size: 2rem;
+  margin: 1rem 2rem;
+}
+
+.navbar-home-link {
+  color: inherit;
+  text-decoration: none;
+}
+.navbar-home-link::before,
+.navbar-home-link::after {
+  content: "";
+}
+.hompage-container-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.homepage-container-divs {
+  width: 300px;
+  height: 500px;
+  background-color: grey;
+  border-radius: 2rem;
+  margin: 1rem;
+}
+
+.homepage-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.top-teas-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-teas-container {
+  width: 100%;
+  padding: 0rem 1rem;
+}
+
+.top-teas-title {
+  color: var(--navbar-background-color);
+  margin: 1rem;
+}
+
+.top-tea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 1rem;
+  background-color: rgb(111, 111, 111);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.top-tea-image {
+  width: 50px;
+  border-radius: 5px;
+}
+
+.top-tea-name {
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+.top-tea-counter {
+  color: black;
+  margin-right: 1rem;
+}
+
+.login-page-parent {
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10rem ;
+}
+
+.login-page-container {
+  padding: 2rem;
+  background-color: rgb(90, 90, 90);
+  width: fit-content;
+  border-radius: 1rem;
+}
+
+.login-form-label-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem;
+
+}
+
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-error-message {
+  background-color: red;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 70px;
+    /* Slightly smaller logo for mobile */
+  }
+}
+
+.login-title {
+  color: #ffffff;
+  /* Brighter text for the title */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.login-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form-container label {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.login-form-container input {
+  padding: 10px;
+  margin: 1rem;
+  border-radius: 4px;
+  border: 1px solid #333333;
+  /* Dark border for inputs */
+  background-color: #333333;
+  /* Dark input backgrounds */
+  color: #ffffff;
+  /* Light text for inputs */
+}
+
+.login-form-container button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #0a84ff;
+  /* A bright color for the button to stand out */
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 1rem;
+}
+
+.login-form-container button:hover {
+  background-color: #006fd6;
+  /* Darker shade when hovered */
+}
+
+p {
+  color: #ff1744;
+  /* Error messages in a bright color to catch attention */
+  text-align: center;
+}
